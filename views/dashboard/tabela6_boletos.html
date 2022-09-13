@@ -1,0 +1,65 @@
+<!-- Main Content-->
+<div class="main-content side-content pt-0">
+
+    <div class="container-fluid">
+        <div class="inner-body">
+
+            <!-- Page Header -->
+            <div class="page-header">
+                <div>
+                    <h2 class="main-content-title tx-24 mg-b-5">Tabela de Boletos</h2>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Início</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Gerenciar-Filial</li>
+                    </ol>
+                </div>
+                <div class="d-flex">
+                    <div class="justify-content-center">
+                        <button type="button" onclick="Indisponivel_Momento()" class="btn btn-white btn-icon-text my-2 mr-2">
+                          <i class="fe fe-download mr-2"></i> IMPORTAR
+                        </button>
+                        <button type="button" onclick="Indisponivel_Momento()" class="btn btn-white btn-icon-text my-2 mr-2">
+                          <i class="fe fe-filter mr-2"></i> FILTRAR
+                        </button>
+                        <button type="button" onclick="Indisponivel_Momento()" class="btn btn-primary my-2 btn-icon-text">
+                          <i class="fe fe-download-cloud mr-2"></i> BAIXAR RELATÓRIO
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- End Page Header -->
+            <form id="frm-boletos">
+                <button type="submit" >Mostrar rows</button>
+            </form>
+                    <!-- Row -->
+                    <div class="row row-sm">
+                        <div class="col-lg-12">
+                            <div class="card custom-card overflow-hidden">
+                                <div class="card-body">
+                                 
+                                    <div class="table-responsive">
+                                        <table id="table-boletos-ajax" class="table table-bordered text-nowrap">
+                                       
+                                     
+                                            <thead>
+                                                <tr>
+                                                    <th class="wd-5p"></th>
+                                                    <th class="wd-5p">Active2</th>
+                                                    <th class="wd-25p">Position</th>
+                                                    <th class="wd-20p">Office</th>
+                                                    <th class="wd-15p">Age</th>
+                                                    <th class="wd-20p">Salary</th>
+                                                </tr>
+                                            </thead>
+
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Row -->
+
+         </div>
+    </div>
+</div>
