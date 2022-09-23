@@ -23,7 +23,7 @@ tr.noBorder td:first-child {
     ====================-->
     <tr  class="noBorder">
             <td class="noBorder">
-                <img src="https://etarpv2.elisyumcorp.com/res/ETARP-LOGO.jpg" style="width:30%;" alt="">    
+                <img src="https://developer.elisyumcorp.com/res/ETARP-LOGO.jpg" style="width:30%;" alt="">    
             </td>
 
             <td class="text-left" style="font-weight: bold; font-size: 17px;  " colspan="2">
@@ -33,6 +33,15 @@ tr.noBorder td:first-child {
             <br>
             I.M: <?= $ETARP_INSCRICAO_MUNICIPAL ?> / I.E: <?= $ETARP_INSCRICAO_ESTADUAL ?>
         
+            <br>
+            <?= $ETARP_ENDERECO ?>
+            <br>
+           
+            <?= $ETARP_ESTADO ?> / <?= $ETARP_CIDADE ?> 
+           
+            <br>
+            CEP: <?= $ETARP_CEP ?>
+          
             <br>
             <?= $ETARP_ENDERECO ?>
             <br>
@@ -262,7 +271,7 @@ tr.noBorder td:first-child {
         <tr>
         <td colspan="3" class="black_blackground" style="width:70%; font-weight: bold;">Atestamos que os dados e valores acima, conferem com os bens ou serviços prestados pela empresa.</td>
 
-         <td  class="black_blackground">NOTA DE COBRAÇA DE LOCAÇÃO</td>
+         <td style="font-weight: bold;" class="black_blackground">NOTA DE COBRAÇA DE LOCAÇÃO</td>
         </tr>
        
    
@@ -279,7 +288,7 @@ tr.noBorder td:first-child {
             <td ></td>
             <td ></td>
             <td ></td>
-            <td > <?= $ID_RELATORIO ?></td>
+            <td ><strong> <?= $ID_RELATORIO ?> </strong></td>
         </tr>
 
 

@@ -162,13 +162,12 @@
 	
 
 
-
 		<!-- Custom js -->
 		<script src="res/js/custom.js?v=2"></script>
 
 
 
-		<script src="res/js/modalsCUSTOMV4.js?v=2"></script>
+		<script src="res/js/modalsCUSTOMV10.js?v=2"></script>
 
 		<script src="res/plugins/echarts/echarts.js"></script>
 		<script src="res/js/chart.echarts.js"></script>
@@ -181,8 +180,8 @@
 		<script src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js"></script>
 	
 		<script type="text/javascript" src="//gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/js/dataTables.checkboxes.min.js"></script>
-		<script src="res/js/table-datav4.js?v=2"></script>
-		<script src="res/js/tablesCUSTOM4.js?v=2"></script>
+		<script src="res/js/table-dataV10.js?v=2"></script>
+		<script src="res/js/tablesCUSTOM10.js?v=2"></script>
 		<script src="http://cdn.datatables.net/plug-ins/1.10.15/api/fnReloadAjax.js"></script>
 
 

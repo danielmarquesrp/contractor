@@ -365,6 +365,7 @@
                                     <option value="0" selected>Anexar Boleto + Fatura</option>
                                     <option value="1" >Anexar apenas Boleto.</option>   
                                     <option value="2" >Anexar apenas Fatura.</option>   
+                                    <option value="3" >Anexar apenas NFS-E</option>   
                                 </select>
                             </div>
 

@@ -1,4 +1,5 @@
 <?php
+    // phpinfo();
     session_start();
     //ob_start();
     require_once("vendor/autoload.php");   
@@ -11,8 +12,8 @@
         require_once('Pages/pdf-pages/gerar-boleto.php'); 
         require_once('Pages/pdf-pages/create-pdf.php');
     
-       require_once('Pages/dashboard-pages/dashboard-recover.php');
-       require_once('Pages/dashboard-pages/dashboard-login.php'); 
+        require_once('Pages/dashboard-pages/dashboard-recover.php');
+        require_once('Pages/dashboard-pages/dashboard-login.php'); 
         require_once('Pages/dashboard-pages/homepage.php'); 
         require_once('Pages/dashboard-pages/tabela0_filiais.php'); 
         require_once('Pages/dashboard-pages/tabela1_servicos.php'); 

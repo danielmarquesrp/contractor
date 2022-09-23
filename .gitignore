@@ -1,0 +1,5 @@
+vendor/Etarp/src/DB/Sql.php
+.htaccess
+/pdf-files
+logs
+*.log

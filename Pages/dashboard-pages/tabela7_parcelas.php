@@ -46,20 +46,21 @@ $app->get('/tabela-parcelas', function($request, $response, $name){
 });                       
 
 
-function getParcela($numParcela, $ParcelaAtual)
+function getParcela($numParcela, $ParcelaAtual, $parcelas_pagas)
 {
-
-
-    if($numParcela < $ParcelaAtual)
+    $parcelas_pagas = json_decode($parcelas_pagas);
+    if(!is_array($parcelas_pagas))
     {
+        $parcelas_pagas = array($parcelas_pagas);
+    }
+    //verifica se $ParcelaAtual existe dentro do array $parcelas_pagas
+    if(in_array($numParcela, $parcelas_pagas)){
         return "PARCELA PAGA COM SUCESSO";
     }
     else
-    {
+    { 
         return "PARCELA PENDENTE DE PAGAMENTO";
     }
-
-
 }
 
 $app->get('/parcelas-ajax-data', function($request, $response, $name){                             
@@ -94,14 +95,14 @@ $app->get('/parcelas-ajax-data', function($request, $response, $name){
         
         if($results['STATUS_CONTRATO'] == "CANCELADO"){
             
-            $parcelaSit = getParcela($desparcelas[$i]->num_parcela  + 1, $results['desnumero_parcela']);
+            $parcelaSit = getParcela($desparcelas[$i]->num_parcela  + 1, $results['desnumero_parcela'], $results['parcelas_pagas']);
           
             if($parcelaSit == 'PARCELA PAGA COM SUCESSO'){
                 $steve =   array(
                     'desnumero_parcela' => ($desparcelas[$i]->num_parcela  + 1). ' ° Parcela' ,
                     'cleannumber' => ($desparcelas[$i]->num_parcela  + 1),
                     'idrelatorio' => $_GET['id'],
-                    'situacao' => getParcela($desparcelas[$i]->num_parcela  + 1, $results['desnumero_parcela']),
+                    'situacao' => getParcela($desparcelas[$i]->num_parcela  + 1, $results['desnumero_parcela'], $results['parcelas_pagas']),
                     'dt_final' => FormatDate(date('d-m-Y', strtotime($results['dt_vencimento'] . $str)))  . ' 00:00:00'   ,
                 );
                 array_push($resposta, $steve);
@@ -111,7 +112,7 @@ $app->get('/parcelas-ajax-data', function($request, $response, $name){
                 'desnumero_parcela' => ($desparcelas[$i]->num_parcela  + 1). ' ° Parcela' ,
                 'cleannumber' => ($desparcelas[$i]->num_parcela  + 1),
                 'idrelatorio' => $_GET['id'],
-                'situacao' => getParcela($desparcelas[$i]->num_parcela  + 1, $results['desnumero_parcela']),
+                'situacao' => getParcela($desparcelas[$i]->num_parcela  + 1, $results['desnumero_parcela'], $results['parcelas_pagas']),
                 'dt_final' => FormatDate(date('d-m-Y', strtotime($results['dt_vencimento'] . $str)))  . ' 00:00:00'   ,
             );
             array_push($resposta, $steve);

@@ -22,10 +22,81 @@ function OpenSQL($query, $id)
 
 
 
+$app->get('/alterar-situacao', function($request, $response, $name){              
+
+
+    if(empty($_GET['id']))
+    {
+        header('HTTP/1.1 500 Internal Server Booboo');
+        header('Content-Type: application/json; charset=UTF-8');
+        exit;
+    }
+    if(empty($_GET['parcela']))
+    {
+        header('HTTP/1.1 500 Internal Server Booboo');
+        header('Content-Type: application/json; charset=UTF-8');
+        exit;
+    }
+
+    try {
+    $sql = new Sql();
+    $id = $_GET['id'];
+
+    $parcela = str_replace(" ° Parcela", "", $_GET['parcela']);
+
+
+               
+    $results = $sql->select("SELECT parcelas_pagas FROM tb_relatorios WHERE idrelatorio = :id", [
+        ':id' => $id,
+    ])[0]['parcelas_pagas'];  
+
+
+    
+    $data = json_decode($results);
+  
+    if(!is_array($data)){
+        $data = array();
+    }
+    if($_GET['sit'] == 1){
+        if(!in_array($parcela, $data)){
+            array_push($data, $parcela);
+        }
+    }else{
+       $newarr = [];
+       foreach($data as $item){
+              if($item != $parcela){
+                $newarr[] = $item;
+              } 
+       }
+       $data = $newarr;
+    }
+
+    $sql->QuerySQL("UPDATE tb_relatorios SET parcelas_pagas = :situacao WHERE idrelatorio = :id", [
+        ':situacao' => json_encode($data),
+        ':id' => $id,
+    ]);
+    } catch (\Throwable $th) {
+        echo $th->getMessage();
+    }
+    
+
+    echo json_encode([
+        'parcela' => $parcela,
+        'results' => $results,
+        'data' => $data,
+        'id' => $id,
+    ]);
+
+
+
+
+    return $response;
+});                       
+
+
+
 
 //? FUNCTIONS
-
-
 
 $app->get('/criar-boleto', function($request, $response, $name)
 {              
@@ -48,7 +119,6 @@ $app->get('/criar-boleto', function($request, $response, $name)
 
     $cliente = OpenSQL('SELECT * FROM tb_clientes a INNER JOIN tb_address b ON a.idcliente = b.idreference WHERE idcliente = :id', $relatorios['idcliente']);
     $filial = OpenSQL('SELECT * FROM tb_filiais a INNER JOIN tb_address b ON a.idfilial = b.idreference WHERE idfilial = :id', $relatorios['idfilial']);
- 
 
     $sacado = new Agente($cliente['desname'], $cliente['desdocument'],$cliente['desendereco'], $cliente['descep'], $cliente['desestado'], $cliente['descidade']);
     $cedente = new Agente($filial['desrazaosocial'], $filial['descnpjfilial'], $filial['descomplemento'], $filial['descep'], $filial['desestado'], $filial['descidade']);
@@ -127,6 +197,7 @@ $app->get('/criar-boleto', function($request, $response, $name)
             )
         ];
 
+   
     $MP_Boleto = new MercadoPago();
     // nfse
     if( !isset($_GET['checagem']) ){
@@ -146,12 +217,15 @@ $app->get('/criar-boleto', function($request, $response, $name)
 
     }else{
 
-        if( $relatorios['ANEXAR_CONTRATO'] == 1 ){
+       if( $relatorios['ANEXAR_CONTRATO'] == 1 ){
             echo $MP_Boleto->doPayament($data, true, false, false) ;
        }
        elseif ( $relatorios['ANEXAR_CONTRATO'] == 2 ) {
            echo $MP_Boleto->doPayament($data, false, true, false);
        }
+       elseif( $relatorios['ANEXAR_CONTRATO'] == 3 ) {
+            echo $MP_Boleto->doPayament($data, false, false, true);
+        }
        else{
            echo $MP_Boleto->doPayament($data, false, false, false);
        }
@@ -217,12 +291,6 @@ $app->post('/gerar-boleto', function($request, $response, $name){
 
 
 $app->post('/adiantar-parcelas', function($request, $response, $name){              
-
-
-
-    // $boleto = new gerador_boleto();
-    
-    // $boleto->GenerateBoleto();
 
 
     if($_POST == null)

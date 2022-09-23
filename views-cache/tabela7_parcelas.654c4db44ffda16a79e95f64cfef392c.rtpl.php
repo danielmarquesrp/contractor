@@ -23,17 +23,13 @@
                 </div>
             </div>
             <!-- End Page Header -->
-
                     <!-- Row -->
                     <div class="row row-sm">
                         <div class="col-lg-12">
                             <div class="card custom-card overflow-hidden">
                                 <div class="card-body">
-                                 
                                     <div class="table-responsive">
                                         <table class="table table-bordered text-nowrap" id="table-parcelas-ajax">
-                                       
-                                       
                                             <thead>
                                                 <tr>
                                                     <th class="wd-20p">Número da Parcela</th>
@@ -46,7 +42,6 @@
                                                     <th class="wd-20p" ></th>
                                                 </tr>
                                             </thead>
-                                      
                                         </table>
                                     </div>
                                 </div>
@@ -54,7 +49,6 @@
                         </div>
                     </div>
                     <!-- End Row -->
-
          </div>
     </div>
 </div>

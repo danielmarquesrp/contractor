@@ -53,6 +53,9 @@ $app->post('/gerar-relatorio', function($request, $response, $name){
             
         'NOME_DA_FILIAL' => $Filial['desrazaosocial'],
         'ETARP_ENDERECO' => $Filial['desendereco'],
+        'ETARP_CIDADE' => $Filial['descidade'],
+        'ETARP_ESTADO' => $Filial['desestado'],
+        'ETARP_CEP' => $Filial['descep'],
         'ETARP_INSCRICAO_MUNICIPAL' => $Filial['desincricaomunicipal'],
         'ETARP_INSCRICAO_ESTADUAL' => $Filial['desinscricaoestadual'],
         'ETARP_CNPJ' => $Filial['descnpjfilial'],

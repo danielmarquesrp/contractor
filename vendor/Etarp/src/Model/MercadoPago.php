@@ -165,6 +165,9 @@ use Main\Gerador_PDF;
                                  
                         'NOME_DA_FILIAL' => $Filial['desrazaosocial'],
                         'ETARP_ENDERECO' => $Filial['desendereco'],
+                        'ETARP_CIDADE' => $Filial['descidade'],
+                        'ETARP_ESTADO' => $Filial['desestado'],
+                        'ETARP_CEP' => $Filial['descep'],
                         'ETARP_INSCRICAO_MUNICIPAL' => $Filial['desincricaomunicipal'],
                         'ETARP_INSCRICAO_ESTADUAL' => $Filial['desinscricaoestadual'],
                         'ETARP_CNPJ' => $Filial['descnpjfilial'],
@@ -205,19 +208,25 @@ use Main\Gerador_PDF;
 
                 public function doPayament($data, $isboleto = false, $isfatura = false, $isnsfe = false)
                 {
-            
-                    $this->CreateConnection();
+                    
+                    try {
+                        $this->CreateConnection();
 
-                    $payment = new \MercadoPago\Payment();
-                    $payment->transaction_amount = $data['pagamento']['valor'];
-                    $payment->description = $data['pagamento']['titulo'];
-                    $payment->payment_method_id = "bolbradesco";
-                    $payment->payer = $data['pagador'][0];         
-                    $payment->save();
-
-                    $directory = $this->doRequest($data['idreceipt'], $data);
-
-                    $boleto = $this->doPdf($directory['directory'], $directory['filename'], $payment->transaction_details->external_resource_url);
+                        $payment = new \MercadoPago\Payment();
+                        $payment->transaction_amount = $data['pagamento']['valor'];
+                        $payment->description = $data['pagamento']['titulo'];
+                        $payment->payment_method_id = "bolbradesco";
+                        $payment->payer = $data['pagador'][0];         
+                        $payment->save();
+    
+                        $directory = $this->doRequest($data['idreceipt'], $data);
+                        
+                        $boleto = $this->doPdf($directory['directory'], $directory['filename'], $payment->transaction_details->external_resource_url);
+                        
+                    } catch (\Throwable $th) {
+                      echo $th->getMessage();
+                    }
+                    
                 
                     $boletoDir = $isfatura == false ? $boleto : null;
                     $pdf_dir =  $isboleto == false ? $directory['final_url'] : null;

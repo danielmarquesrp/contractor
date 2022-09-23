@@ -50,7 +50,6 @@
                                                     <th class="wd-20p">ID</th>
                                                     <th class="wd-20p">Nome do Cliente</th>                                    
                                                     <th class="wd-20p">E-mail do  Cliente</th>
-                                                
                                                     <th class="wd-20p">DATA DA PRÓXIMA PARCELA</th>      
                                                     <th class="wd-25p">DATA DA PARCELA FINAL</th>
                                                     <th class="wd-10p"></th>                             
