@@ -484,18 +484,18 @@ CREATE TABLE `tb_address` (
 -- Extraindo dados da tabela `tb_address`
 --
 
-INSERT INTO `tb_address` (`idaddress`, `idreference`, `addresstype`, `descep`, `desendereco`, `descomplemento`, `desbairro`, `desestado`, `descidade`) VALUES
-(47, '33', '1', '21540-500', 'Estrada do Barro Vermelho', 'poste branco 43', 'Rocha Miranda', 'Rio de Janeiro', 'Rio de Janeiro'),
-(72, '48', '1', '14050070', 'Rua Doutor Loiola, 516', 'sala 02', 'Vila Tibério', 'São paulo', 'Ribeirão Preto'),
-(75, 'danielmarques.rp@gmail.com', '0', 'Estrada do Barro Vermelho', '600', 'teste', 'RJ', 'Rio de Janeiro', '50'),
-(79, '55', '0', '14050070', 'Rua Doutor Loiola', 'Sala 02, 516', '24121', 'RJ', 'Ribeirão Preto'),
-(80, '56', '0', '14050070', '1', '1', '1', '1', '1'),
-(81, 'danielmarques.rp@gmail.com', '0', '1', '1', '1', '1', '1', '56'),
-(108, '69', '0', '21545500', 'RJ', '421412412', '00000000', 'RJ', 'RIO DE JANEIRO'),
-(112, '48', '1', '14050070', 'Rua Doutor Loiola, 516', 'sala 02', 'Vila Tibério', 'São paulo', 'Ribeirão Preto'),
-(113, '73', '0', 'CEP *', 'Endereço *', 'Complemento *', 'Bairro *', 'Estado *', 'Cidade *'),
-(115, '49', '1', '14000000', 'rua fox, 1', 'sala2', 'bairro one', 'SP', 'city fox'),
-(116, '75', '0', '6666', 'rua grupo, 23', 'sal 696', 'vila do bairro', 'sao paulo', 'rib preto');
+--INSERT INTO `tb_address` (`idaddress`, `idreference`, `addresstype`, `descep`, `desendereco`, `descomplemento`, `desbairro`, `desestado`, `descidade`) VALUES
+--(47, '33', '1', '21540-500', 'Estrada do Barro Vermelho', 'poste branco 43', 'Rocha Miranda', 'Rio de Janeiro', 'Rio de Janeiro'),
+--(72, '48', '1', '14050070', 'Rua Doutor Loiola, 516', 'sala 02', 'Vila Tibério', 'São paulo', 'Ribeirão Preto'),
+--(75, 'danielmarques.rp@gmail.com', '0', 'Estrada do Barro Vermelho', '600', 'teste', 'RJ', 'Rio de Janeiro', '50'),
+--(79, '55', '0', '14050070', 'Rua Doutor Loiola', 'Sala 02, 516', '24121', 'RJ', 'Ribeirão Preto'),
+--(80, '56', '0', '14050070', '1', '1', '1', '1', '1'),
+--(81, 'danielmarques.rp@gmail.com', '0', '1', '1', '1', '1', '1', '56'),
+--(108, '69', '0', '21545500', 'RJ', '421412412', '00000000', 'RJ', 'RIO DE JANEIRO'),
+--(112, '48', '1', '14050070', 'Rua Doutor Loiola, 516', 'sala 02', 'Vila Tibério', 'São paulo', 'Ribeirão Preto'),
+--(113, '73', '0', 'CEP *', 'Endereço *', 'Complemento *', 'Bairro *', 'Estado *', 'Cidade *'),
+--(115, '49', '1', '14000000', 'rua fox, 1', 'sala2', 'bairro one', 'SP', 'city fox'),
+--(116, '75', '0', '6666', 'rua grupo, 23', 'sal 696', 'vila do bairro', 'sao paulo', 'rib preto');
 
 -- --------------------------------------------------------
 
@@ -532,9 +532,9 @@ CREATE TABLE `tb_clientes` (
 -- Extraindo dados da tabela `tb_clientes`
 --
 
-INSERT INTO `tb_clientes` (`idcliente`, `desclient_type`, `IE_Indicator`, `IE_cod`, `desname`, `desemail`, `desemailsec`, `desdocument_type`, `desdocument`, `desnumber`) VALUES
-(73, 'Cliente', 'OPÇÃO 3', 'Inscrição Estadual *', 'Nome do Cliente *', 'vto.hugo67@gmail.com', '', 'PESSOA JURÍDICA', 'CPF/CNPJ do Cliente *', 'Telefone do Cliente *'),
-(75, 'Cliente', 'OPÇÃO 3', '11111', 'clie testando', 'daniel@etarp.com.br', 'daniel@foxonesoft.com.br', 'Cliente', '999999', '16161616');
+--INSERT INTO `tb_clientes` (`idcliente`, `desclient_type`, `IE_Indicator`, `IE_cod`, `desname`, `desemail`, `desemailsec`, `desdocument_type`, `desdocument`, `desnumber`) VALUES
+--(73, 'Cliente', 'OPÇÃO 3', 'Inscrição Estadual *', 'Nome do Cliente *', 'vto.hugo67@gmail.com', '', 'PESSOA JURÍDICA', 'CPF/CNPJ do Cliente *', 'Telefone do Cliente *'),
+--(75, 'Cliente', 'OPÇÃO 3', '11111', 'clie testando', 'daniel@etarp.com.br', 'daniel@foxonesoft.com.br', 'Cliente', '999999', '16161616');
 
 -- --------------------------------------------------------
 
@@ -553,8 +553,8 @@ CREATE TABLE `tb_consts` (
 -- Extraindo dados da tabela `tb_consts`
 --
 
-INSERT INTO `tb_consts` (`id`, `desdevelopment`, `deswebsite_root_url`, `desmercadopagotoken`) VALUES
-(1, 'https://etarpv2.elisyumcorp.com/', 'https://etarpv2.elisyumcorp.com/', 'TEST-1758101653358813-051811-2804ac179f74288b8aab9e6a4cb5632c-778851117');
+--INSERT INTO `tb_consts` (`id`, `desdevelopment`, `deswebsite_root_url`, `desmercadopagotoken`) VALUES
+--(1, 'https://etarpv2.elisyumcorp.com/', 'https://etarpv2.elisyumcorp.com/', 'TEST-1758101653358813-051811-2804ac179f74288b8aab9e6a4cb5632c-778851117');
 
 -- --------------------------------------------------------
 
@@ -578,9 +578,9 @@ CREATE TABLE `tb_filiais` (
 -- Extraindo dados da tabela `tb_filiais`
 --
 
-INSERT INTO `tb_filiais` (`idfilial`, `desrazaosocial`, `desnomefilial`, `destelefonefilial`, `desemailfilial`, `descnpjfilial`, `desincricaomunicipal`, `desinscricaoestadual`, `descnae`) VALUES
-(48, 'ETARP AUTOMACAO E INFORMATICA EIRELLI', 'ETARP AUTOMACAO', '16 32895501', 'grupoetarp@etarp.com.br', '24466750000111', '123456789321', '123456', '44343-testeste'),
-(49, 'fox one razao', 'fox one', '123456789', 'fox@fox.com', '789789789', '321321321', '654654', '458789');
+--INSERT INTO `tb_filiais` (`idfilial`, `desrazaosocial`, `desnomefilial`, `destelefonefilial`, `desemailfilial`, `descnpjfilial`, `desincricaomunicipal`, `desinscricaoestadual`, `descnae`) VALUES
+--(48, 'ETARP AUTOMACAO E INFORMATICA EIRELLI', 'ETARP AUTOMACAO', '16 32895501', 'grupoetarp@etarp.com.br', '24466750000111', '123456789321', '123456', '44343-testeste'),
+--(49, 'fox one razao', 'fox one', '123456789', 'fox@fox.com', '789789789', '321321321', '654654', '458789');
 
 -- --------------------------------------------------------
 
@@ -598,8 +598,8 @@ CREATE TABLE `tb_persons` (
 --
 
 INSERT INTO `tb_persons` (`idperson`, `desperson`) VALUES
-(141, 'Vitor Hugo'),
-(144, 'daniel'),
+--(141, 'Vitor Hugo'),
+--(144, 'daniel'),
 (151, 'Admin'),
 (152, 'Etarp Admin');
 
@@ -620,9 +620,9 @@ CREATE TABLE `tb_produtos` (
 -- Extraindo dados da tabela `tb_produtos`
 --
 
-INSERT INTO `tb_produtos` (`idproduto`, `desname`, `desdescription`, `destype`) VALUES
-(45, 'Produto 2', 'teste serv', 1),
-(46, 'Produto 1', 'tetse prod', 0);
+--INSERT INTO `tb_produtos` (`idproduto`, `desname`, `desdescription`, `destype`) VALUES
+--(45, 'Produto 2', 'teste serv', 1),
+--(46, 'Produto 1', 'tetse prod', 0);
 
 -- --------------------------------------------------------
 
@@ -674,11 +674,11 @@ CREATE TABLE `tb_relatorios` (
 -- Extraindo dados da tabela `tb_relatorios`
 --
 
-INSERT INTO `tb_relatorios` (`idrelatorio`, `idfilial`, `idcliente`, `desrelatorio`, `desdescription`, `desprodutcts_array`, `desprodutcts_array_values`, `desfilial_nome`, `descliente_nome`, `periodo_vencimento`, `quantidade_parcelas`, `has_to_pay_today`, `dt_inicial`, `dt_vencimento`, `dt_final`, `desnumero_parcela`, `parcelas_pagas`, `desparcelas`, `ANEXAR_CONTRATO`, `NUMERO_REF`, `VALOR_DESCONTO`, `VALOR_DESPESAS`, `STATUS_CONTRATO`) VALUES
-(385, 48, 73, 'ETARP AUTOMACAO', ' asfaf', '46', '[[\"46\",\"1\",\"25\"]]', 'ETARP AUTOMACAO', 'teste', '30', '3', 1, '2022-08-03', '03-08-2022', '03-11-2022', 2, NULL, '[{\"num_parcela\":0,\"desboleto\":\"https:\\/\\/etarpv2.elisyumcorp.com\\/\\/pdf-files\\/\\/boleto-9789483794184454-etarp.pdf\",\"descontrato\":\"https:\\/\\/etarpv2.elisyumcorp.com\\/\\/pdf-files\\/contrato-9789483794184454-etarp.pdf\"},{\"num_parcela\":1,\"desboleto\":\"https:\\/\\/etarpv2.elisyumcorp.com\\/\\/pdf-files\\/\\/boleto-385.pdf\",\"descontrato\":\"https:\\/\\/etarpv2.elisyumcorp.com\\/\\/pdf-files\\/NCL-385.pdf\"},{\"num_parcela\":2,\"desboleto\":null,\"descontrato\":null},{\"num_parcela\":3,\"desboleto\":null,\"descontrato\":null}]', '0', '00', '00.00', '00.00', 'PENDENTE'),
-(386, 48, 75, 'ETARP AUTOMACAO', ' prod1', '45,46', '[[\"45\",\"1\",\"10\"],[\"46\",\"1\",\"10\"]]', 'ETARP AUTOMACAO', 'clie testando', '30', '2', 1, '2022-08-03', '10-08-2022', '10-10-2022', 1, NULL, '[{\"num_parcela\":0,\"desboleto\":\"https:\\/\\/etarpv2.elisyumcorp.com\\/\\/pdf-files\\/\\/boleto-8467551355750239-etarp.pdf\",\"descontrato\":\"https:\\/\\/etarpv2.elisyumcorp.com\\/\\/pdf-files\\/contrato-8467551355750239-etarp.pdf\"},{\"num_parcela\":1,\"desboleto\":null,\"descontrato\":null},{\"num_parcela\":2,\"desboleto\":null,\"descontrato\":null}]', '2', '1', '1', '1', 'PENDENTE'),
-(387, 49, 75, 'fox one', 'teste ', '45,46', '[[\"45\",\"1\",\"12\"],[\"46\",\"1\",\"12\"]]', 'fox one', 'clie testando', '30', '5', 1, '2022-08-03', '20-08-2022', '20-01-2023', 1, NULL, '[{\"num_parcela\":0,\"desboleto\":null,\"descontrato\":null},{\"num_parcela\":1,\"desboleto\":null,\"descontrato\":null},{\"num_parcela\":2,\"desboleto\":null,\"descontrato\":null},{\"num_parcela\":3,\"desboleto\":null,\"descontrato\":null},{\"num_parcela\":4,\"desboleto\":null,\"descontrato\":null},{\"num_parcela\":5,\"desboleto\":null,\"descontrato\":null}]', '2', '9999', '00.00', '12', 'PENDENTE'),
-(388, 48, 73, 'ETARP AUTOMACAO', 'testes', '45', '[[\"45\",\"1\",\"1\"]]', 'ETARP AUTOMACAO', 'Nome do Cliente *', '30', '0', 1, '2022-08-10', '10-08-2022', '10-08-2022', 1, NULL, '[{\"num_parcela\":0,\"desboleto\":\"https:\\/\\/etarpv2.elisyumcorp.com\\/\\/pdf-files\\/\\/boleto-388.pdf\",\"descontrato\":\"https:\\/\\/etarpv2.elisyumcorp.com\\/\\/pdf-files\\/NCL-388.pdf\"}]', '0', '00', '00.00', '00.00', 'PENDENTE');
+--INSERT INTO `tb_relatorios` (`idrelatorio`, `idfilial`, `idcliente`, `desrelatorio`, `desdescription`, `desprodutcts_array`, `desprodutcts_array_values`, `desfilial_nome`, `descliente_nome`, `periodo_vencimento`, `quantidade_parcelas`, `has_to_pay_today`, `dt_inicial`, `dt_vencimento`, `dt_final`, `desnumero_parcela`, `parcelas_pagas`, `desparcelas`, `ANEXAR_CONTRATO`, `NUMERO_REF`, `VALOR_DESCONTO`, `VALOR_DESPESAS`, `STATUS_CONTRATO`) VALUES
+--(385, 48, 73, 'ETARP AUTOMACAO', ' asfaf', '46', '[[\"46\",\"1\",\"25\"]]', 'ETARP AUTOMACAO', 'teste', '30', '3', 1, '2022-08-03', '03-08-2022', '03-11-2022', 2, NULL, '[{\"num_parcela\":0,\"desboleto\":\"https:\\/\\/etarpv2.elisyumcorp.com\\/\\/pdf-files\\/\\/boleto-9789483794184454-etarp.pdf\",\"descontrato\":\"https:\\/\\/etarpv2.elisyumcorp.com\\/\\/pdf-files\\/contrato-9789483794184454-etarp.pdf\"},{\"num_parcela\":1,\"desboleto\":\"https:\\/\\/etarpv2.elisyumcorp.com\\/\\/pdf-files\\/\\/boleto-385.pdf\",\"descontrato\":\"https:\\/\\/etarpv2.elisyumcorp.com\\/\\/pdf-files\\/NCL-385.pdf\"},{\"num_parcela\":2,\"desboleto\":null,\"descontrato\":null},{\"num_parcela\":3,\"desboleto\":null,\"descontrato\":null}]', '0', '00', '00.00', '00.00', 'PENDENTE'),
+--(386, 48, 75, 'ETARP AUTOMACAO', ' prod1', '45,46', '[[\"45\",\"1\",\"10\"],[\"46\",\"1\",\"10\"]]', 'ETARP AUTOMACAO', 'clie testando', '30', '2', 1, '2022-08-03', '10-08-2022', '10-10-2022', 1, NULL, '[{\"num_parcela\":0,\"desboleto\":\"https:\\/\\/etarpv2.elisyumcorp.com\\/\\/pdf-files\\/\\/boleto-8467551355750239-etarp.pdf\",\"descontrato\":\"https:\\/\\/etarpv2.elisyumcorp.com\\/\\/pdf-files\\/contrato-8467551355750239-etarp.pdf\"},{\"num_parcela\":1,\"desboleto\":null,\"descontrato\":null},{\"num_parcela\":2,\"desboleto\":null,\"descontrato\":null}]', '2', '1', '1', '1', 'PENDENTE'),
+--(387, 49, 75, 'fox one', 'teste ', '45,46', '[[\"45\",\"1\",\"12\"],[\"46\",\"1\",\"12\"]]', 'fox one', 'clie testando', '30', '5', 1, '2022-08-03', '20-08-2022', '20-01-2023', 1, NULL, '[{\"num_parcela\":0,\"desboleto\":null,\"descontrato\":null},{\"num_parcela\":1,\"desboleto\":null,\"descontrato\":null},{\"num_parcela\":2,\"desboleto\":null,\"descontrato\":null},{\"num_parcela\":3,\"desboleto\":null,\"descontrato\":null},{\"num_parcela\":4,\"desboleto\":null,\"descontrato\":null},{\"num_parcela\":5,\"desboleto\":null,\"descontrato\":null}]', '2', '9999', '00.00', '12', 'PENDENTE'),
+--(388, 48, 73, 'ETARP AUTOMACAO', 'testes', '45', '[[\"45\",\"1\",\"1\"]]', 'ETARP AUTOMACAO', 'Nome do Cliente *', '30', '0', 1, '2022-08-10', '10-08-2022', '10-08-2022', 1, NULL, '[{\"num_parcela\":0,\"desboleto\":\"https:\\/\\/etarpv2.elisyumcorp.com\\/\\/pdf-files\\/\\/boleto-388.pdf\",\"descontrato\":\"https:\\/\\/etarpv2.elisyumcorp.com\\/\\/pdf-files\\/NCL-388.pdf\"}]', '0', '00', '00.00', '00.00', 'PENDENTE');
 
 -- --------------------------------------------------------
 
@@ -747,8 +747,8 @@ CREATE TABLE `tb_stmt_options` (
 -- Extraindo dados da tabela `tb_stmt_options`
 --
 
-INSERT INTO `tb_stmt_options` (`id`, `desemail`, `despassword`, `deshost`, `desport`, `dessendername`, `desreplytoemail`, `desregistersuccess`) VALUES
-(1, 'no_reply@etarp.com.br', 'MNt64R&FgkpQ', 'smtp.office365.com', '587', 'Grupo Etarp - Contabilidade', 'no_reply@etarp.com.br', 'Etarp');
+--INSERT INTO `tb_stmt_options` (`id`, `desemail`, `despassword`, `deshost`, `desport`, `dessendername`, `desreplytoemail`, `desregistersuccess`) VALUES
+--(1, 'no_reply@etarp.com.br', 'MNt64R&FgkpQ', 'smtp.office365.com', '587', 'Grupo Etarp - Contabilidade', 'no_reply@etarp.com.br', 'Etarp');
 
 -- --------------------------------------------------------
 
@@ -770,9 +770,9 @@ CREATE TABLE `tb_users` (
 --
 
 INSERT INTO `tb_users` (`iduser`, `idperson`, `deslogin`, `despassword`, `inadmin`, `dtregister`) VALUES
-(141, 141, 'vto.hugo62@gmail.com', '$2y$10$F58haxHgLYbdgY5nb9g5eujFVqNIzmkDS4MA6HKm8LoNC3NHOGjdW', 0, '2021-07-13 03:31:41'),
-(151, 151, 'etarp@admin.com', '0', 0, '2022-07-13 22:29:45'),
-(152, 152, 'etarp@suporte.com', '$2y$12$.KHDsp8OshuYnPmNz2iyIuo5SgOc2DQNMw1xhDJlPzeIFzNpG0XqO', 0, '2022-08-03 13:30:26');
+--(141, 141, 'vto.hugo62@gmail.com', '$2y$10$F58haxHgLYbdgY5nb9g5eujFVqNIzmkDS4MA6HKm8LoNC3NHOGjdW', 0, '2021-07-13 03:31:41'),
+(151, 151, 'carla@etarp.com.br', '0', 0, '2022-07-13 22:29:45'),
+(152, 152, 'daniel@etarp.com.br', '$12$8Db20E0CSjueSExxpUvqfuudqnTQ/bjHXAGFTX6h2AaBc0SyzEB/q', 0, '2022-08-03 13:30:26');
 
 --
 -- Índices para tabelas despejadas
